@@ -14,7 +14,7 @@ module.exports = function (sails) {
       return cb();
     },
     getConnection: function(name) {
-      if (this[name]) {
+      if (this[name] !== undefined) {
         return this[name];
       }
       else {
