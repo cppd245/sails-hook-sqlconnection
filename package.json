@@ -1,0 +1,21 @@
+{
+  "name": "sails-hook-sqlconnection",
+  "version": "0.0.0",
+  "description": "Loads a singleton node-mssql connection pool object",
+  "main": "index.js",
+  "sails": {
+    "isHook": true
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "sails": "~0.11.0"
+  },
+  "author": "Cory Bowles <cbowles@telesystem.us>",
+  "license": "ISC",
+  "dependencies": {
+    "mssql": "^2.3.1"
+  }
+}
