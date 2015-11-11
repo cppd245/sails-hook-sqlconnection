@@ -1,6 +1,7 @@
 'use strict';
 
-var sql = require('mssql');
+var _ = require('lodash'),
+    sql = require('mssql');
 module.exports = function (sails) {
 
   return {
@@ -11,22 +12,21 @@ module.exports = function (sails) {
       }
     },
     initialize: function(cb) {
-      return cb();
-    },
-    getConnection: function(name) {
-      if (this[name] !== undefined) {
-        return this[name];
-      }
-      else {
-        this[name] = new sql.Connection(sails.config[this.configKey].connections[name]);
-        this[name].connect()
+      var self = this;
+      _.forEach(sails.config[this.configKey].connections, function(n, key) {
+        self[key] = new sql.Connection(n);
+        self[key].connect()
           .then(function() {
-            return this[name];
+            sails.log.debug(key + ' connection pool initialized');
           })
           .catch(function(err) {
             sails.log.error(err)
           });
-      }
+      });
+      return cb();
+    },
+    getConnection: function(name) {
+      return this[name];
     }
   };
 }
