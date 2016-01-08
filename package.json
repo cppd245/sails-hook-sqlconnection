@@ -16,6 +16,7 @@
   "author": "Cory Bowles <cbowles@telesystem.us>",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^3.10.1",
     "mssql": "^2.3.1"
   }
 }
