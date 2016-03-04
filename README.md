@@ -52,7 +52,7 @@ module.exports.sqlconnection = {
 
 ### Example
 
-Use mssql as you noramally would once a connection pool has been initialized:
+Use mssql as you normally would once a connection pool has been initialized:
 
 ```javascript
 'use strict';
