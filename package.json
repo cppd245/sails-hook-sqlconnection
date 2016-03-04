@@ -9,6 +9,18 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/bootstrap.spec.js ./test/sqlconnection.spec.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cppd245/sails-hook-sqlconnection.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cppd245/sails-hook-sqlconnection.git/issues"
+  },
+  "keywords": [
+    "sails",
+    "hook",
+    "mssql"
+  ],
   "devDependencies": {
     "chai": "*",
     "mocha": "*",
