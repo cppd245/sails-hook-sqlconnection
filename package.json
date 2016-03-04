@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-sqlconnection",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Loads a singleton node-mssql connection pool object",
   "main": "index.js",
   "sails": {
