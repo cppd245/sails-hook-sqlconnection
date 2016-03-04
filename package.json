@@ -7,16 +7,19 @@
     "isHook": true
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha ./test/bootstrap.spec.js ./test/sqlconnection.spec.js"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "sails": "~0.11.0"
+    "chai": "*",
+    "mocha": "*",
+    "sails": "*"
   },
-  "author": "Cory Bowles <cbowles@telesystem.us>",
+  "author": "Cory K. Bowles <cbowles@telesystem.us>",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^3.10.1",
-    "mssql": "^2.3.1"
+    "chai": "^3.5.0",
+    "lodash": "^4.6.1",
+    "mssql": "^3.1.1",
+    "sails": "^0.12.1"
   }
 }
